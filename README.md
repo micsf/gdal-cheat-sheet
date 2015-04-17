@@ -236,6 +236,12 @@ __Create contours from DEM__
 __Get values for a specific location in a raster__
 
 	gdallocationinfo -xml -wgs84 input.tif <lon> <lat>  
+	
+__GRIB to tif__
+
+	gdal_translate input.grb -b 1 output_band_1.tif
+	
+If you don't pick a band, you'll end up with a multi-band image (in some instances, this could result in different variables being crammed into a nonsense RGB image).
 
 
 Other
